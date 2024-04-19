@@ -10,18 +10,21 @@ public class PersonBuilder {
         } else this.name = name;
         return this;
     }
+
     public PersonBuilder setSurname(String surname) throws IllegalArgumentException {
         if (surname == null || surname.isEmpty()) {
             throw new IllegalArgumentException("No surname specified");
         } else this.surname = surname;
         return this;
     }
+
     public PersonBuilder setAge(int age) throws IllegalArgumentException {
         if (age < 0) {
             throw new IllegalArgumentException("The age cannot be negative");
         } else this.age = age;
         return this;
     }
+
     public PersonBuilder setAddress(String address) {
         this.address = address;
         return this;
